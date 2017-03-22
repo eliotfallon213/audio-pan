@@ -30,14 +30,28 @@ function initPage(){
 			});
     		$(this).removeClass('pause');
     		$(this).addClass('play');
+    		$('button').text('Play');
     	} else {
     		$('audio').each(function() {
 				this.play();
 			});
     		$(this).addClass('pause');
     		$(this).removeClass('play');
+    		$('button').text('Pause');
     	}
     })
+
+    //Sync up L & R
+    setInterval(function() {
+    	if($('#audio-first-left').currentTime !== $('#audio-first-right').currentTime) $('#audio-first-left').currentTime = $('#audio-first-right').currentTime;
+    }, 100);
+
+    //
+    if ($('.player_audio').paused == false) {
+    	$('button').text('Play');
+    } else {
+    	$('button').text('Pause');
+    }
 
 };
 

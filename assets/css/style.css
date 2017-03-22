@@ -30,10 +30,27 @@ blockquote {padding: 16px; background: #eee;}
 	margin: 20px 40px;
 }
 
-button{
-	margin: 30px;
+#custom-handle {
+    width: 3em;
+    height: 2.4em;
+    top: 50%;
+    margin-top: -1.2em;
+    margin-left: -1.5em;
+    text-align: center;
+    line-height: 2.4em;
 }
 
+button{
+	margin: 30px;
+	background: #cccccc;
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.ui-slider-horizontal {
+	height: 2em !important;
+}
 
 /* Media queries
 -------------------------------------------------------------------------------*/
